@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/ranking/ranking",
+    "pages/battles/battles",
+    "pages/knowledge/knowledge",
+    "pages/knowledge/content/content",
+    "pages/logs/logs",
+    "pages/loging/loging",
+    "pages/liveClass/liveClass",
+    "pages/personal/personal",
+    "pages/chapter/chapter"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

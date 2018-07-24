@@ -1,0 +1,25 @@
+<!--pages/knowledge/knowledge.wxml-->
+<text>题库页面，嗯嗯嗯嗯嗯嗯嗯嗯</text>
+<navigator url="/pages/knowledge/content/content" hover-class="navigator-hover">
+      <text class='iz ih-zbo'></text>
+      <text>直播课</text>
+    </navigator>
+<!-- 底部导航 -->
+  <view class='nav'>
+    <navigator class='active' url="/pages/home/home" open-type="redirect" hover-class="navigator-hover">
+      <text class='iz ih-shouye'></text>
+      <text>首页</text>
+    </navigator>
+    <navigator url="/pages/liveClass/liveClass" hover-class="navigator-hover">
+      <text class='iz ih-zbo'></text>
+      <text>直播课</text>
+    </navigator>
+    <navigator url="/pages/chapter/chapter" hover-class="navigator-hover">
+      <text class='iz ih-paper'></text>
+      <text>章节</text>
+    </navigator>
+    <navigator url="/pages/personal/personal" hover-class="navigator-hover">
+      <text class='iz ih-wode'></text>
+      <text>我的</text>
+    </navigator>
+  </view>

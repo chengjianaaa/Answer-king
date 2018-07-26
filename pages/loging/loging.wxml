@@ -1,5 +1,18 @@
 <!--pages/loging/loging.wxml-->
-<view>
-<text>旋转加载木马</text>
+<view class='loging-box'>
+  <view class="section3">
+    <view class="ui_base u_p3d">
+      <view class="ball_c">
+      <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
+      </view>
+      <view class="base u_p3d">
+        <view class="ball_base u_p3d ball_1">
+          <view class="ball">
+            <image src='/img/xq.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+    <open-data type="userNickName" class="userinfo-nickname"></open-data>
 </view>
-

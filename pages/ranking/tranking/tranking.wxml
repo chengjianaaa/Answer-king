@@ -1,0 +1,9 @@
+<!--pages/ranking/tranking/tranking.wxml-->
+<template name="postItem">
+<view class='list-content'>
+              <text class='list-ranking'>{{(idx+1)<10?'0'+(idx+1):(idx+1)}}</text>
+              <image src="{{picture}}" class="userinfo-avatar"></image>
+              <text class="userinfo-nickname">{{name}}</text>
+              <text class='list-win'>{{integral}}</text>
+            </view>
+</template>

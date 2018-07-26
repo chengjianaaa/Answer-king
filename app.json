@@ -1,20 +1,22 @@
 {
-  "pages":[
+  "pages": [
+    "pages/Readiness/Readiness",
     "pages/home/home",
     "pages/ranking/ranking",
+    "pages/ranking/tranking/tranking",
+    "pages/loging/loging",
     "pages/battles/battles",
     "pages/knowledge/knowledge",
     "pages/knowledge/content/content",
     "pages/logs/logs",
-    "pages/loging/loging",
     "pages/liveClass/liveClass",
     "pages/personal/personal",
     "pages/chapter/chapter"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

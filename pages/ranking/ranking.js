@@ -1,20 +1,62 @@
 // pages/ranking/ranking.js
+var rankingData=require('../../data/ranking-data.js')
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    winWidth: 0,
+    winHeight: 0,
+    // tab切换 
+    currentTab: 0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+  //比较器
+    function compare(propertyName) {
+      return function (object1, object2) {
+        var value1 = object1[propertyName];
+        var value2 = object2[propertyName];
+        if (value2 > value1) {
+          return 1;
+        } else if (value2 < value1) {
+          return -1;
+        } else {
+          return 0;
+        }
+      }
+    }
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight,
+          rankingList: rankingData.rankingList.sort(compare("integral"))
+        });
+      }
+    });
   },
+  bindChange: function (e) {
+    var that = this;
+    that.setData({ currentTab: e.detail.current });
+  },
+  swichNav: function (e) {
+    var that = this;
 
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

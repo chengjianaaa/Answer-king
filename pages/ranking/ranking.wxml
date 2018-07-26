@@ -1,2 +1,39 @@
 <!--pages/ranking/ranking.wxml-->
-<text>pages/ranking/ranking.wxml</text>
+<import src="/pages/ranking/tranking/tranking.wxml"/>
+<view class='container'>
+  <view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0 ? 'active' : ''}}" data-current="0" bindtap="swichNav">今日榜单</view>
+    <view class="swiper-tab-item {{currentTab==1 ? 'active' : ''}}" data-current="1" bindtap="swichNav">总榜单</view>
+  </view>
+  <view>
+    <view class='list-title'>
+      <text>排名</text>
+      <text>胜场数</text>
+    </view>
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight-90}}px" bindchange="bindChange">
+      <swiper-item>
+        <view class='list-content my-ranking'>
+          <text class='list-ranking'>01</text>
+          <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
+          <open-data type="userNickName" class="userinfo-nickname"></open-data>
+          <text class='list-win'>10000</text>
+        </view>
+        <view class='list-contents'>
+          <block wx:for="{{rankingList}}" wx:for-item="item" wx:for-index="idx">
+            <template is="postItem" data="{{...item,idx}}"/>
+          </block>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class='list-contents'>
+          <block wx:for="{{rankingList}}" wx:for-item="item" wx:for-index="idx">
+            <template is="postItem" data="{{...item,idx}}"/>
+          </block>
+        </view>
+      </swiper-item>
+    </swiper>
+    <text class='list-hint'>
+    每小时更新一次
+    </text>
+  </view>
+</view>

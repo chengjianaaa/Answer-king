@@ -6,7 +6,7 @@
     </navigator>
 <!-- 底部导航 -->
   <view class='nav'>
-    <navigator class='active' url="/pages/home/home" open-type="redirect" hover-class="navigator-hover">
+    <navigator url="/pages/home/home" open-type="redirect" hover-class="navigator-hover">
       <text class='iz ih-shouye'></text>
       <text>首页</text>
     </navigator>

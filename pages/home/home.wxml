@@ -18,22 +18,22 @@
   <view class='modules'>
     <view class='modules-random'>
       <navigator url="/pages/loging/loging" hover-class="navigator-hover">
-      <image src='/img/sy_01.png'></image>
+      <image src='/img/sy_01.jpg'></image>
       </navigator>
     </view>
     <view class='modules-friends'>
       <navigator url="/pages/battles/battles" hover-class="navigator-hover">
-      <image src='/img/sy_02.png'></image>
+      <image src='/img/sy_02.jpg'></image>
       </navigator>
     </view>
     <view class='modules-topic'>
       <navigator url="/pages/knowledge/knowledge" hover-class="navigator-hover">
-      <image src='/img/sy_03.png'></image>
+      <image src='/img/sy_03.jpg'></image>
       </navigator>
     </view>
     <view class='modules-live'>
       <navigator url="/pages/liveClass/liveClass" hover-class="navigator-hover">
-      <image src='/img/sy_04.png'></image></navigator>
+      <image src='/img/sy_04.jpg'></image></navigator>
     </view>
   </view>
   <!-- 底部导航 -->

@@ -1,1 +1,164 @@
 /* pages/ranking/ranking.wxss */
+
+page {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  padding: 0 24rpx;
+}
+
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  line-height: 80rpx;
+}
+
+.swiper-tab-item {
+  font-size: 32rpx;
+  display: inline-block;
+  width: 50%;
+  color: #fff;
+}
+
+.active {
+  position: relative;
+  font-size: 38rpx;
+  color: #f9be0a;
+}
+
+.swiper-tab .active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80rpx;
+  height: 8rpx;
+  border-radius: 50px;
+  background: #f9be0a;
+}
+
+.list-title {
+  display: flex;
+  justify-content: center;
+  font-size: 28rpx;
+  height: 50px;
+  line-height: 100rpx;
+  color: #5e67ab;
+}
+
+.list-title text {
+  width: 50%;
+  text-align: center;
+}
+
+/*排行榜列表*/
+
+.swiper-box {
+  position: relative;
+  display: block;
+  height: 1000rpx;
+  width: 100%;
+  color: #fff;
+  padding-bottom: 70px;
+  box-sizing: border-box;
+}
+
+.swiper-box swiper-item {
+  width: 100%;
+  overflow: scroll;
+}
+
+.swiper-box view {
+  width: 100%;
+}
+
+.list-content{
+  margin-bottom: 35rpx;
+  background: -webkit-linear-gradient(left, #7f63fc, #4346f0);
+  /* Opera 11.1 - 12.0 */
+  background: -o-linear-gradient(left, #7f63fc, #4346f0);
+  /* Firefox 3.6 - 15 */
+  background: -moz-linear-gradient(left, #7f63fc, #4346f0);
+  /* 标准的语法 */
+  background: linear-gradient(to right, #7f63fc, #4346f0);
+}
+.list-contents .list-content{
+  margin-bottom: 15rpx;
+  background: rgba(100, 94, 179, 0.3);
+}
+
+.list-content{
+  display: flex;
+  height: 160rpx;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 6px;
+}
+
+.list-content text{
+  display: flex;
+  min-width: 55rpx;
+  line-height: 160rpx;
+  font-size: 32rpx;
+  vertical-align: middle;
+}
+
+.list-ranking {
+  justify-content: center;
+  margin: 0 20rpx;
+}
+
+.userinfo-avatar {
+  width: 110rpx;
+  height: 110rpx;
+  margin: 25rpx 25rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userinfo-nickname {
+  display: flex;
+  flex: 2;
+  height: 160rpx;
+  margin-left: 35rpx;
+  align-content: center;
+  line-height: 150rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.list-win {
+  width: 135rpx;
+  margin-right: 70rpx;
+  justify-content: center;
+}
+
+.list-hint {
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  color: #5e67ab;
+  text-align: center;
+}
+
+/*取消滚动条*/
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}

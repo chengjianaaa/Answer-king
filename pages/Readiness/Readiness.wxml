@@ -1,0 +1,21 @@
+<!--pages/Readiness/Readiness.wxml-->
+<view class='readbox'>
+  <text class='readtext'>匹配成功</text>
+  <view class='readtop'>
+    <view class='myuser'>
+      <view class='myuser-avater'>
+        <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
+      </view>
+    </view>
+    <open-data type="userNickName" class="userinfo-nickname"></open-data>
+  </view>
+  <view class='readbottom'>
+    <view class='ituser'>
+      <view class='ituser-avater'>
+        <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
+      </view>
+    </view>
+    <open-data type="userNickName" class="userinfo-nickname"></open-data>
+  </view>
+  <image class='readlogo' src='/img/logo_03.png'></image>
+</view>

@@ -12,14 +12,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    this.data.timer = setTimeout(function () {
+      wx.redirectTo({
+        url: '/pages/battles/battles'
+      })
+    }, 3000)
   },
 
   /**
@@ -33,14 +37,14 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    clearTimeout(this.data.timer);
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+    clearTimeout(this.data.timer);
   },
 
   /**

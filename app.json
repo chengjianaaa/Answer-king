@@ -1,11 +1,12 @@
 {
   "pages": [
-    "pages/Readiness/Readiness",
+    "pages/battles/battles",
     "pages/home/home",
     "pages/ranking/ranking",
     "pages/ranking/tranking/tranking",
     "pages/loging/loging",
-    "pages/battles/battles",
+    "pages/Readiness/Readiness",
+
     "pages/knowledge/knowledge",
     "pages/knowledge/content/content",
     "pages/logs/logs",

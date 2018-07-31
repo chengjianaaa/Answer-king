@@ -1,2 +1,57 @@
 <!--pages/battles/battles.wxml-->
-<text>PK页面</text>
+<view class='container'>
+  <view class='pk-title'>
+    <view class='mycontent'>
+      <open-data type="userNickName" class="userinfo-nickname"></open-data>
+      <text class='myintegral'>500</text>
+      <view class='myavater-box'>
+        <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
+      </view>
+    </view>
+    <view class='countdown' animation="{{animationData}}">
+      <text wx:if="{{render<5}}">{{times}}</text>
+    </view>
+    <view class='itcontent'>
+      <open-data type="userNickName" class="userinfo-nickname"></open-data>
+      <text class='itintegral'>500</text>
+      <view class='itavater-box'>
+        <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
+      </view>
+    </view>
+  </view>
+  <view class='topic-box'>
+    <block wx:for='{{battlesList}}' wx:for-item="item" wx:for-index="index" wx:if="{{render===index}}">
+    <view class='pk-bottombox'>
+      <view class='pk-bottom'>
+        <image src='/img/bottom_00.png'></image>
+        <text>{{item.types}}</text>
+      </view>
+    </view>
+      <view class='subjectbox'>
+        <view class='subject'>
+          <text class='subject-label'>【单项选择题】</text>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='option'>
+          <block wx:for='{{item.answer}}' wx:for-item='it' wx:for-index='idx'>
+            <button type="{{indexs==it.id?it.typekey?'primary':'warn':''}}{{it.typekey?truetype:''}}" id="{{it.id}}" hover-class="none" bindtouchstart="optiontap">
+              <icon class="iz {{it.typekey?'ih-duihao':'ih-cuowu'}}" />
+              <text>{{it.answertext}}</text>
+              <icon class="iz"></icon>
+            </button>
+          </block>
+        </view>
+      </view>
+    </block>
+    <!-- <view>
+      <text class='meitintegral'>688分</text>
+      <text class='heiitintegral'>480分</text>
+      <image src='/img/'></image>
+      <view>
+        <button></button>
+        <button>继续挑战</button>
+        <button>炫耀成绩</button>
+      </view>
+    </view> -->
+  </view>
+</view>

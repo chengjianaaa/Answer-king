@@ -3,7 +3,7 @@
   <view class='pk-title'>
     <view class='mycontent'>
       <open-data type="userNickName" class="userinfo-nickname"></open-data>
-      <text class='myintegral'>500</text>
+      <text class='myintegral'>{{myintegral}}</text>
       <view class='myavater-box'>
         <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
       </view>
@@ -20,13 +20,13 @@
     </view>
   </view>
   <view class='topic-box'>
-    <block wx:for='{{battlesList}}' wx:for-item="item" wx:for-index="index" wx:if="{{render===index}}">
-    <view class='pk-bottombox'>
-      <view class='pk-bottom'>
-        <image src='/img/bottom_00.png'></image>
-        <text>{{item.types}}</text>
+    <!-- <block wx:for='{{battlesList}}' wx:for-item="item" wx:for-index="index" wx:if="{{render===index}}">
+      <view class='pk-bottombox'>
+        <view class='pk-bottom'>
+          <image src='/img/bottom_00.png'></image>
+          <text>{{item.types}}</text>
+        </view>
       </view>
-    </view>
       <view class='subjectbox'>
         <view class='subject'>
           <text class='subject-label'>【单项选择题】</text>
@@ -34,7 +34,7 @@
         </view>
         <view class='option'>
           <block wx:for='{{item.answer}}' wx:for-item='it' wx:for-index='idx'>
-            <button type="{{indexs==it.id?it.typekey?'primary':'warn':''}}{{it.typekey?truetype:''}}" id="{{it.id}}" hover-class="none" bindtouchstart="optiontap">
+            <button type="{{indexs==it.id?it.typekey?'primary':'warn':''}}{{it.typekey?truetype:''}}" data-type="{{it.typekey}}" id="{{it.id}}" hover-class="none" bindtouchstart="optiontap">
               <icon class="iz {{it.typekey?'ih-duihao':'ih-cuowu'}}" />
               <text>{{it.answertext}}</text>
               <icon class="iz"></icon>
@@ -42,16 +42,16 @@
           </block>
         </view>
       </view>
-    </block>
-    <!-- <view>
-      <text class='meitintegral'>688分</text>
-      <text class='heiitintegral'>480分</text>
-      <image src='/img/'></image>
-      <view>
-        <button></button>
-        <button>继续挑战</button>
-        <button>炫耀成绩</button>
+    </block> -->
+    <view class='victory'>
+      <text class='meitintegral'>688</text>
+      <text class='heiitintegral'>480</text>
+      <image class='victory-img' src='/img/victory.png'></image>
+      <view class='victory-bom'>
+        <navigator class='victory-review' hover-class='none'></navigator>
+        <button class='victory-continue' hover-class='none'>继续挑战</button>
+        <button class='victory-flaunt' hover-class='none'><image src='/img/mincrown.png'></image> 炫耀成绩</button>
       </view>
-    </view> -->
+    </view>
   </view>
 </view>

@@ -1,0 +1,19 @@
+<!--pages/analysis/analysis.wxml-->
+<view class='container'>
+  <view class='an-title'>
+    <image src='/img/logo_00.png'></image>答案解析</view>
+  <block wx:for='{{battlesList}}' wx:for-item="item" wx:for-index="index">
+    <view class='an-topic'>
+      <view class='an-subject'>
+        {{index+1}}、{{item.title}}
+      </view>
+      <view class='an-option' wx:for='{{item.answer}}' wx:for-item='it' wx:for-index='idx'>
+      {{it.id}}. {{it.answertext}}
+      </view>
+      <view class='an-answer' wx:for='{{item.answer}}' wx:for-item='it' wx:for-index='idx' wx:if="{{it.typekey}}">
+        <text>我的答案：{{option[index]}}</text>
+        【正确答案】{{it.id}}。解析：{{item.rightkey}}
+      </view>
+    </view>
+  </block>
+</view>

@@ -17,3 +17,7 @@
 // module.exports = {
 //   formatTime: formatTime
 // }
+var battlesData = require('../data/battles-data.js')
+module.exports = {
+  battlesList: battlesData.battlesList
+}

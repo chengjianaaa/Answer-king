@@ -3,24 +3,25 @@
   <view class='pk-title'>
     <view class='mycontent'>
       <open-data type="userNickName" class="userinfo-nickname"></open-data>
-      <text class='myintegral'>{{myintegral}}</text>
+      <text class='myintegral'  animation="{{animationfractionl}}">{{myintegral}}</text>
       <view class='myavater-box'>
         <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
       </view>
     </view>
-    <view class='countdown' animation="{{animationData}}">
+    <view class='countdown' animation="{{animationTiems}}">
       <text wx:if="{{render<5}}">{{times}}</text>
     </view>
     <view class='itcontent'>
       <open-data type="userNickName" class="userinfo-nickname"></open-data>
-      <text class='itintegral'>500</text>
+      <text class='itintegral' animation="{{animationfractionr}}">{{itintegral}}</text>
       <view class='itavater-box'>
         <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
       </view>
     </view>
   </view>
   <view class='topic-box'>
-    <!-- <block wx:for='{{battlesList}}' wx:for-item="item" wx:for-index="index" wx:if="{{render===index}}">
+    <!-- 答题 -->
+    <block wx:for='{{battlesList}}' wx:for-item="item" wx:for-index="index" wx:if="{{render===index}}">
       <view class='pk-bottombox'>
         <view class='pk-bottom'>
           <image src='/img/bottom_00.png'></image>
@@ -42,15 +43,35 @@
           </block>
         </view>
       </view>
-    </block> -->
-    <view class='victory'>
-      <text class='meitintegral'>688</text>
-      <text class='heiitintegral'>480</text>
+    </block>
+    <!-- 赢 -->
+    <view class='victory' wx:if="{{render==5&&myintegral>itintegral}}">
+      <text class='meitintegral'>{{myintegral}}</text>
+      <text class='heiitintegral'>{{itintegral}}</text>
       <image class='victory-img' src='/img/victory.png'></image>
       <view class='victory-bom'>
-        <navigator class='victory-review' hover-class='none'></navigator>
-        <button class='victory-continue' hover-class='none'>继续挑战</button>
-        <button class='victory-flaunt' hover-class='none'><image src='/img/mincrown.png'></image> 炫耀成绩</button>
+        <navigator url="/pages/analysis/analysis?option0={{option0}}&&option1={{option1}}&&option2={{option2}}&&option3={{option3}}&&option4={{option4}}" class='victory-review' hover-class="navigator-hover"></navigator>
+        <navigator url="/pages/loging/loging" hover-class="navigator-hover" class='victory-continue'>
+          继续挑战
+        </navigator>
+        <button class='victory-flaunt' hover-class='none'>
+          <image src='/img/mincrown.png'></image> 炫耀成绩</button>
+      </view>
+    </view>
+    <!-- 输 -->
+    <view class='fail' wx:elif="{{render==5&&myintegral<itintegral}}">
+      <text class='meitintegral'>{{myintegral}}</text>
+      <text class='heiitintegral'>{{itintegral}}</text>
+      <image class='victory-img' src='/img/fail.png'></image>
+      <view class='victory-bom'>
+        <navigator url="/pages/analysis/analysis?option0={{option0}}&&option1={{option1}}&&option2={{option2}}&&option3={{option3}}&&option4={{option4}}" class='victory-review' hover-class="navigator-hover"></navigator>
+          <navigator class='victory-continue' url="/pages/loging/loging" hover-class="navigator-hover">继续挑战</navigator>
+        <view class='studys'>
+          <button class='victory-share' hover-class='none'>
+            <image src='/img/mincrown.png'></image>分享结果</button>
+          <button class='victory-studys' hover-class='none'>
+            <image src='/img/satudy.png'></image>学会再战</button>
+        </view>
       </view>
     </view>
   </view>

@@ -76,7 +76,9 @@ page {
 .swiper-box view {
   width: 100%;
 }
-
+.list-contents{
+  position: relative;
+}
 .list-content{
   margin-bottom: 35rpx;
   background: -webkit-linear-gradient(left, #7f63fc, #4346f0);
@@ -96,6 +98,7 @@ page {
   display: flex;
   height: 160rpx;
   justify-content: space-between;
+  align-items:center;
   flex-direction: row;
   border-radius: 6px;
 }
@@ -103,16 +106,27 @@ page {
 .list-content text{
   display: flex;
   min-width: 55rpx;
-  line-height: 160rpx;
   font-size: 32rpx;
   vertical-align: middle;
 }
 
 .list-ranking {
   justify-content: center;
+  display: block;
+  width:27px;
+  height: 32px;
+  line-height:60rpx;
+  vertical-align: middle;
   margin: 0 20rpx;
 }
+.m_first{
+position:absolute;
+top:6rpx;
+left:103rpx;
+width:28px;
+height:24px;
 
+}
 .userinfo-avatar {
   width: 110rpx;
   height: 110rpx;
@@ -120,11 +134,12 @@ page {
   border-radius: 50%;
   overflow: hidden;
 }
-
+.list-contents .list-content:nth-child(1) .userinfo-avatar{
+  background: red;
+}
 .userinfo-nickname {
   display: flex;
   flex: 2;
-  height: 160rpx;
   margin-left: 35rpx;
   align-content: center;
   line-height: 150rpx;
@@ -133,7 +148,9 @@ page {
   -webkit-line-clamp: 1;
   overflow: hidden;
 }
-
+.userinfo-nickname,.list-win{
+  line-height: 160rpx;
+}
 .list-win {
   width: 135rpx;
   margin-right: 70rpx;

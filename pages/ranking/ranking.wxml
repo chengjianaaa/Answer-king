@@ -19,14 +19,14 @@
           <text class='list-win'>10000</text>
         </view>
         <view class='list-contents'>
-          <block wx:for="{{rankingList}}" wx:for-item="item" wx:for-index="idx">
+          <block wx:for="{{rankingList}}" wx:for-item="item" wx:for-index="idx" wx:key="index">
             <template is="postItem" data="{{...item,idx}}"/>
           </block>
         </view>
       </swiper-item>
       <swiper-item>
         <view class='list-contents'>
-          <block wx:for="{{rankingList}}" wx:for-item="item" wx:for-index="idx">
+          <block wx:for="{{rankingList}}" wx:for-item="item" wx:for-index="idx" wx:key="index">
             <template is="postItem" data="{{...item,idx}}"/>
           </block>
         </view>

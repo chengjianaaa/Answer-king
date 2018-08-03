@@ -1,7 +1,11 @@
 <!--pages/ranking/tranking/tranking.wxml-->
 <template name="postItem">
 <view class='list-content'>
-              <text class='list-ranking'>{{(idx+1)<10?'0'+(idx+1):(idx+1)}}</text>
+              <image wx:if='{{idx==0}}' class='list-ranking' src='/img/gold.png'></image>
+              <image wx:elif='{{idx==1}}' class='list-ranking' src='/img/silver .png'></image>
+              <image wx:elif='{{idx==2}}' class='list-ranking' src='/img/bronze.png'></image>
+              <text wx:else class='list-ranking'>{{(idx+1)<10?'0'+(idx+1):(idx+1)}}</text>
+              <image wx:if='{{idx==0}}' src='/img/m_first.png' class='m_first'></image>
               <image src="{{picture}}" class="userinfo-avatar"></image>
               <text class="userinfo-nickname">{{name}}</text>
               <text class='list-win'>{{integral}}</text>

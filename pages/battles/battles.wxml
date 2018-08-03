@@ -21,7 +21,7 @@
   </view>
   <view class='topic-box'>
     <!-- 答题 -->
-    <block wx:for='{{battlesList}}' wx:for-item="item" wx:for-index="index" wx:if="{{render===index}}">
+    <block wx:for='{{battlesList}}' wx:for-item="item" wx:for-index="index" wx:if="{{render===index}}" wx:key="index">
       <view class='pk-bottombox'>
         <view class='pk-bottom'>
           <image src='/img/bottom_00.png'></image>
@@ -34,7 +34,7 @@
           <text>{{item.title}}</text>
         </view>
         <view class='option'>
-          <block wx:for='{{item.answer}}' wx:for-item='it' wx:for-index='idx'>
+          <block wx:for='{{item.answer}}' wx:for-item='it' wx:for-index='idx' wx:key="index">
             <button type="{{indexs==it.id?it.typekey?'primary':'warn':''}}{{it.typekey?truetype:''}}" data-type="{{it.typekey}}" id="{{it.id}}" hover-class="none" bindtouchstart="optiontap">
               <icon class="iz {{it.typekey?'ih-duihao':'ih-cuowu'}}" />
               <text>{{it.answertext}}</text>
@@ -54,7 +54,7 @@
         <navigator url="/pages/loging/loging" hover-class="navigator-hover" class='victory-continue'>
           继续挑战
         </navigator>
-        <button class='victory-flaunt' hover-class='none'>
+        <button class='victory-flaunt' open-type="share" hover-class='none'>
           <image src='/img/mincrown.png'></image> 炫耀成绩</button>
       </view>
     </view>
@@ -67,7 +67,7 @@
         <navigator url="/pages/analysis/analysis?option0={{option0}}&&option1={{option1}}&&option2={{option2}}&&option3={{option3}}&&option4={{option4}}" class='victory-review' hover-class="navigator-hover"></navigator>
           <navigator class='victory-continue' url="/pages/loging/loging" hover-class="navigator-hover">继续挑战</navigator>
         <view class='studys'>
-          <button class='victory-share' hover-class='none'>
+          <button class='victory-share' open-type="share" hover-class='none'>
             <image src='/img/mincrown.png'></image>分享结果</button>
           <button class='victory-studys' hover-class='none'>
             <image src='/img/satudy.png'></image>学会再战</button>

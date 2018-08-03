@@ -16,11 +16,9 @@ Page({
     //获取题库
     var _this=this;
     this.setData({
-      
       battlesList: battlesData.battlesList,
       option: [options.option0, options.option1, options.option2, options.option3, options.option4]
     })
-    console.log(this.data.node1)
   },
 
   /**

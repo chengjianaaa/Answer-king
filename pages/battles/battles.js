@@ -1,5 +1,10 @@
 // pages/battles/battles.js
 var battlesData = require('../../utils/util.js')
+const app = getApp()
+const innerAudioContext = wx.createInnerAudioContext()
+// innerAudioContext.autoplay = true
+// innerAudioContext.loop = true
+
 Page({
 
   // 页面的初始数据(傻子不知道)
@@ -67,6 +72,21 @@ Page({
           truetype: event.currentTarget.dataset.type ? '' : 'primary',
           myintegral: event.currentTarget.dataset.type ? _this.data.myintegral + 100 + (_this.data.times > 25 ? 80 : _this.data.times > 20 ? 50 : _this.data.times > 10 ? 30 : -10) : _this.data.myintegral
         })
+        if (event.currentTarget.dataset.type){
+          //选对音乐
+          innerAudioContext.src = 'https://img95.699pic.com/audio/550/507/5aebfe4fa2120_all.mp3'
+          innerAudioContext.play();
+          innerAudioContext.onPlay(() => {
+            console.log('开始播放')
+          })
+        }else{
+          //选错音乐
+          innerAudioContext.src = 'https://img95.699pic.com/audio/548/482/5aebfe383e247_all.mp3'
+          innerAudioContext.play();
+          innerAudioContext.onPlay(() => {
+            console.log('开始播放')
+          })
+        }
         console.log(event.currentTarget.dataset.type ? "真聪明选对了！" : "傻逼，不是这个")
         console.log(_this.data.selected ? "他选对没" : "等会人家还没选呢！")
         //保存选项
@@ -157,6 +177,7 @@ Page({
       animationfractionr: animation.export()
     })
   },
+ 
   /**
    * 生命周期函数--监听页面加载
    */

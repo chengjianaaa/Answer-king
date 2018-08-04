@@ -1,11 +1,16 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+const innerAudioContext = wx.createInnerAudioContext()
+// innerAudioContext.autoplay = true
+innerAudioContext.loop = true
+innerAudioContext.src = 'https://i.y.qq.com/v8/playsong.html?songmid=003LPSKS28dwVH'
+console.log(123213)
 Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
+    music:1,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
@@ -41,6 +46,36 @@ Page({
         }
       })
     }
+    
+  },
+ //生命周期函数--监听页面显示
+  onShow: function () {
+    //背景音乐
+    innerAudioContext.play();
+    innerAudioContext.onPlay(() => {
+      console.log('开始播放')
+    })
+    innerAudioContext.onError((res) => {
+      console.log(res.errMsg)
+      console.log(res.errCode)
+    })
+  },
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+    innerAudioContext.pause()
+    innerAudioContext.onPause(() => {
+      console.log('暂停播放')
+    })
+  },
+
+  //生命周期函数--监听页面卸载
+  onUnload: function () {
+    innerAudioContext.stop()
+    innerAudioContext.onStop(() => {
+      console.log('停止播放')
+    })
   },
   getUserInfo: function(e) {
     console.log(e)

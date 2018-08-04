@@ -110,3 +110,10 @@ page{
   align-items: center;
   padding: 20rpx 0 100rpx;
 }
+.white{
+  position: absolute;
+  height: 1rpx;
+  top: 40rpx;
+  right: 40rpx;
+  color: rgba(255, 255, 255, .3);
+}

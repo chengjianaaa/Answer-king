@@ -1,4 +1,9 @@
 // pages/Readiness/Readiness.js
+const app = getApp()
+const innerAudioContext = wx.createInnerAudioContext()
+// innerAudioContext.autoplay = true
+// innerAudioContext.loop = true
+innerAudioContext.src = 'https://img95.699pic.com/audio/236/369/5aefc2835ebb7_all.mp3'
 Page({
 
   /**
@@ -12,7 +17,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //背景音乐
+    innerAudioContext.play();
+    innerAudioContext.onPlay(() => {
+      console.log('开始播放')
+    })
+    innerAudioContext.onError((res) => {
+      console.log(res.errMsg)
+      console.log(res.errCode)
+    })
   },
 
   /**

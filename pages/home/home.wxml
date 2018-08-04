@@ -9,14 +9,14 @@
       <text class='rankings-tal'>(排名每小時更新)</text>
     </view>
   </view>
-  <view class='rankings-skip'>
+  <view class='rankings-skip' bindtap='onstap'>
     <navigator url="/pages/ranking/ranking" hover-class='none'>
       <text class='iz ih-phb'></text> 排行榜
       <image src='/img/zjt.png'></image>
     </navigator>
   </view>
   <view class='modules'>
-    <view class='modules-random'>
+    <view class='modules-random' bindtap='onstap'>
       <navigator url="/pages/loging/loging" hover-class="navigator-hover">
       <image src='/img/sy_01.jpg'></image>
       </navigator>
@@ -36,6 +36,9 @@
       <image src='/img/sy_04.jpg'></image></navigator>
     </view>
   </view>
+  <!--彩蛋-->
+  <navigator class='white' url="/pages/lx/lx" hover-class="navigator-hover">.
+      </navigator>
   <!-- 底部导航 -->
   <view class='nav'>
     <navigator class='active' url="/pages/home/home" open-type="redirect" hover-class="navigator-hover">

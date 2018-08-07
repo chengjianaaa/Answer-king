@@ -534,7 +534,11 @@ background:linear-gradient(to right, #ed8910, #ed9c10);
 .studys .victory-studys{
 height:100rpx;
 width:280rpx;
+ margin:0 45rpx;
   color:#fff;
+line-height: 100rpx;
+text-align: center;
+border-radius: 10rpx;
 background:-webkit-linear-gradient(left, #2c83cd, #3459ca);
 background:-o-linear-gradient(left, #2c83cd, #3459ca);
 background:-moz-linear-gradient(left, #2c83cd, #3459ca);

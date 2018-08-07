@@ -69,8 +69,9 @@
         <view class='studys'>
           <button class='victory-share' open-type="share" hover-class='none'>
             <image src='/img/mincrown.png'></image>分享结果</button>
-          <button class='victory-studys' hover-class='none'>
-            <image src='/img/satudy.png'></image>学会再战</button>
+          <navigator class='victory-studys' url="/pages/knowledge/knowledge" hover-class="navigator-hover">
+            <image src='/img/satudy.png'></image>学会再战
+            </navigator>
         </view>
       </view>
     </view>

@@ -5,7 +5,6 @@ const innerAudioContext = wx.createInnerAudioContext()
 // innerAudioContext.autoplay = true
 innerAudioContext.loop = true
 innerAudioContext.src = 'https://i.y.qq.com/v8/playsong.html?songmid=003LPSKS28dwVH'
-console.log(123213)
 Page({
   data: {
     userInfo: {},

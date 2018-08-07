@@ -39,13 +39,13 @@ Page({
   
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
+  //生命周期函数--监听页面隐藏
   onHide: function () {
-    console.log(1);
-    clearTimeout(this.data.timer);
-    console.log(2);
+    clearTimeout(this.data.timer);//停止定时器
+    innerAudioContext.pause()
+    innerAudioContext.onPause(() => {
+      console.log('暂停播放')
+    })
   },
     //生命周期函数--监听页面显示
     onShow: function () {
@@ -59,18 +59,10 @@ Page({
         console.log(res.errCode)
       })
     },
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-      innerAudioContext.pause()
-      innerAudioContext.onPause(() => {
-        console.log('暂停播放')
-      })
-    },
 
     //生命周期函数--监听页面卸载
     onUnload: function () {
+      clearTimeout(this.data.timer);//停止定时器
       innerAudioContext.stop()
       innerAudioContext.onStop(() => {
         console.log('停止播放')

@@ -206,14 +206,16 @@ Page({
      * 生命周期函数--监听页面隐藏
      */
     onHide: function() {
-
+      clearTimeout(this.data.timer);
+      console.log(1)
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
-
+  onUnload: function () {
+    clearTimeout(this.data.timer);
+      console.log(2)
     },
 
     /**

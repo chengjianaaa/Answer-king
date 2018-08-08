@@ -41,11 +41,7 @@ Page({
 
   //生命周期函数--监听页面隐藏
   onHide: function () {
-    clearTimeout(this.data.timer);//停止定时器
-    innerAudioContext.pause()
-    innerAudioContext.onPause(() => {
-      console.log('暂停播放')
-    })
+    
   },
     //生命周期函数--监听页面显示
     onShow: function () {

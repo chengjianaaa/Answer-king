@@ -4,7 +4,7 @@ const app = getApp()
 const innerAudioContext = wx.createInnerAudioContext()
 // innerAudioContext.autoplay = true
 innerAudioContext.loop = true
-innerAudioContext.src = 'https://i.y.qq.com/v8/playsong.html?songmid=003LPSKS28dwVH'
+innerAudioContext.src = 'http://img95.699pic.com/audio/404/044/5aebf68cd03d6_all.mp3'
 Page({
   data: {
     userInfo: {},
@@ -55,8 +55,6 @@ Page({
       console.log('开始播放')
     })
     innerAudioContext.onError((res) => {
-      console.log(res.errMsg)
-      console.log(res.errCode)
     })
   },
   /**

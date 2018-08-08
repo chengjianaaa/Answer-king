@@ -2,7 +2,6 @@ const innerAudioContext = wx.createInnerAudioContext()
 // innerAudioContext.autoplay = true
 innerAudioContext.loop = true
 innerAudioContext.src = 'http://ovhvevt35.bkt.clouddn.com/photo/%E5%A5%BD%E5%A6%B9%E5%A6%B9%E4%B9%90%E9%98%9F%20-%20%E4%B8%8D%E8%AF%B4%E5%86%8D%E8%A7%81.mp3'
-console.log(123213)
 Page({
   onShow: function () {
     //背景音乐

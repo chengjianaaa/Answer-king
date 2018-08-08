@@ -1,6 +1,9 @@
 //app.js
 var config = require('./config')
 App({
+  addData:{
+    baseUrl: `${config.service.host}/weapp/`
+  },
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []

@@ -1,5 +1,6 @@
 // pages/ranking/ranking.js
 var rankingData=require('../../data/ranking-data.js')
+var config = require('../../config')
 var app = getApp()
 Page({
 
@@ -41,6 +42,32 @@ Page({
         });
       }
     });
+    wx.reportAnalytics('daily_rankings', {
+      daily_rankings: 0,
+      rankings: 0,
+    });
+  },
+  //排行榜
+  getRankFriendsData: function () {
+    const that = this
+    qcloud.request({
+      login: false,
+      url: app.appData.baseUrl + 'getRankFriendsData',
+      data: {
+        openId: this.data.openId
+      },
+      success: (res) => {
+        this.setData({
+          friendsData: res.data.data
+        })
+        
+      },
+      fail(error) {
+        util.showModel('请求失败', error);
+        console.log('request fail', error);
+      },
+    });
+    console.log(this.data.friendsData)
   },
   bindChange: function (e) {
     var that = this;

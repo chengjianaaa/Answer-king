@@ -36,7 +36,6 @@
       <image src='/img/sy_04.jpg'></image></navigator>
     </view>
   </view>
-  <!--彩蛋-->
   <navigator class='white' url="/pages/lx/lx" hover-class="navigator-hover">.
       </navigator>
   <!-- 底部导航 -->

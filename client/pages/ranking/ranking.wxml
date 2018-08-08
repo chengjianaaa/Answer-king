@@ -17,6 +17,28 @@
           <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
           <open-data type="userNickName" class="userinfo-nickname"></open-data>
           <text class='list-win'>10000</text>
+
+
+ <view wx:for="{{friendsData}}" class='item'>
+        <view style='width:10%;font-size:38rpx;'>{{index+1}}</view>
+        <view style='width:30%;'>
+          <image src='{{item.avatarUrl}}'></image>
+        </view>
+        <view style='width:70%;'>
+          <view class='itemDetail'>
+            <text>{{item.nickName}}</text>
+            <text style='font-size:28rpx;'>来自:{{item.city}}</text>
+          </view>
+          <view class='itemDetail'>
+            <text>最强王者</text>
+            <text style='font-size:28rpx;'>得分:{{item.score}}</text>
+          </view>
+        </view>
+      </view>
+
+
+
+
         </view>
         <view class='list-contents'>
           <block wx:for="{{rankingList}}" wx:for-item="item" wx:for-index="idx" wx:key="index">

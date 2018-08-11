@@ -1,0 +1,10 @@
+<view class='container'>
+  <view class='title'>山西教师资格证考试<icon class='iz ih-you'></icon></view>
+  <text>眼过千遍，不如手过一遍</text>
+  <view>
+    <image src='/img/practice.jpg'></image>
+  </view>
+  <view>
+    <image src='/img/oldexam.jpg'></image>
+  </view>
+</view>

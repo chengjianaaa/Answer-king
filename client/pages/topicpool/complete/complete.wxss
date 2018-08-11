@@ -1,0 +1,68 @@
+/* pages/topicpool/period/period.wxss */
+page {
+  height: 100%;
+}
+
+.container {
+  display: block;
+  height: 100%;
+  padding-top: 120rpx;
+}
+.period{
+  display: block;
+  width: 630rpx;
+  height: 700rpx;
+  margin: 0 auto;
+  overflow: scroll;
+  padding-bottom: 60rpx;
+  border-radius: 3px;
+  background: #fff;
+}
+.period .period-title{
+  display: block;
+  width: 100%;
+  height: 120rpx;
+  padding: 0 60rpx;
+  color: #fff;
+  font-weight:bold;
+  line-height: 120rpx;
+  box-sizing:border-box;
+  background: linear-gradient(to right,#f5be82, #f16348);
+}
+.selected{
+  padding: 0 20rpx;
+}
+.selected navigator{
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 30rpx;
+  border-bottom:1px dashed #ccc;
+}
+.selected text{
+  float: right;
+}
+.selected .iz{
+  float: right;
+  color: #999;
+  font-size: 40rpx;
+  margin-left:10rpx;
+  font-weight:bold;
+}
+.container .btn{
+  width:300rpx;
+  margin-top: 80rpx;
+  color: #fff;
+  border-radius: 10px;
+  background: #ffac1b;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+/* pages/topicpool/topicpool.wxss */
+
+page {
+  height: 100%;
+}
+
+.container {
+  display: block;
+  height: 100%;
+  padding-top: 120rpx;
+}
+
+.topicpool {
+  display: block;
+  width: 630rpx;
+  margin: 0 auto;
+  padding-bottom: 60rpx;
+  text-align: center;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.topicpool-img {
+  width: 630rpx;
+  height: 280rpx;
+}
+
+.topicpool-text {
+  display: block;
+  font-size: 45rpx;
+  padding: 80rpx 0;
+}
+
+.topicpool navigator {
+  position: relative;
+  width: 460rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 0 auto 60rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  background: #ffac1b;
+}
+
+.navigator-hover {
+  background: #fb8b14 !important;
+  opacity: 1;
+}
+
+.topicpool navigator .iz {
+  position: absolute;
+  left: 40rpx;
+  display:none;
+  font-size: 45rpx;
+  margin: 0 10rpx;
+}
+.navigator-hover .iz{
+  display:  inline-block !important;
+}

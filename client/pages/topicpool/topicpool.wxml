@@ -1,0 +1,11 @@
+<!--pages/topicpool/topicpool.wxml-->
+<view class='container'>
+  <view class='topicpool'>
+    <image class='topicpool-img' src='/img/ttop.jpg'></image>
+    <text class='topicpool-text'>请选择考试类型</text>
+    <navigator url="/pages/topicpool/seniority/seniority"  hover-class="navigator-hover">
+      <icon class="iz ih-yyd"></icon>教师资格证考试</navigator>
+    <navigator url="/pages/topicpool/seniority/seniority"  hover-class="navigator-hover">
+      <icon class="iz ih-yyd"></icon>教师招聘考试</navigator>
+  </view>
+</view>

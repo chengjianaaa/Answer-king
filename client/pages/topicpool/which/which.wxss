@@ -1,0 +1,26 @@
+/* pages/topicpool/which/which.wxss */
+page {
+  height: 100%;
+}
+
+.container {
+  display: block;
+  height: 100%;
+}
+.container .title{
+  height: 120rpx;
+  line-height: 120rpx;
+  margin: 0 20rpx;
+  padding: 0 40rpx;
+  color: #FFF;
+  background: linear-gradient(to right,#528ff5, #1a2399);
+}
+.container .title .iz{
+  float:right;
+  font-size: 40rpx;
+}
+
+
+
+
+

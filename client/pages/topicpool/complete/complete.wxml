@@ -1,0 +1,18 @@
+<!--pages/topicpool/complete/complete.wxml-->
+<view class='container'>
+  <view class='period'>
+    <text class='period-title'>教师招聘考试</text>
+    <view class='selected'>
+      <navigator url='/pages/topicpool/seniority/seniority?confirm=1'>
+      请选择学段<icon class='iz ih-you'></icon><text>{{schools}}</text>
+      </navigator>
+      <navigator wx:if="{{schools!='幼儿园'}}" url='/pages/topicpool/seniority/seniority?confirm=2&school={{schools}}'>
+      请选择学科<icon class='iz ih-you'></icon><text>{{courses}}</text>
+      </navigator>
+      <navigator url='/pages/topicpool/seniority/seniority?confirm=3'>
+      请选择地址<icon class='iz ih-you'></icon><text>{{address}}</text>
+      </navigator>
+    </view>
+  </view>
+  <button class='btn'>完成</button>
+</view>

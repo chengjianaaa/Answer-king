@@ -1,7 +1,7 @@
 {
   "pages": [
+    "pages/topicpool/which/which",
     "pages/home/home",
-    "pages/lx/lx",
     "pages/ranking/ranking",
     "pages/ranking/tranking/tranking",
     "pages/loging/loging",
@@ -12,7 +12,12 @@
     "pages/knowledge/content/content",
     "pages/liveClass/liveClass",
     "pages/personal/personal",
-    "pages/chapter/chapter"
+    "pages/chapter/chapter",
+    "pages/topicpool/topicpool",
+    "pages/topicpool/period/period",
+    "pages/topicpool/complete/complete",
+    "pages/topicpool/seniority/seniority",
+    "pages/lx/lx"
   ],
   "window": {
     "backgroundTextStyle": "light",

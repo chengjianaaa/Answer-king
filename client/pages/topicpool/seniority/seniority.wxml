@@ -1,0 +1,53 @@
+<!--pages/topicpool/seniority/seniority.wxml-->
+<view class='container'>
+  <view class='period' wx:if="{{confirm==1}}" wx-key='index'>
+    <text class='period-title'>请选择学段</text>
+    <view>
+      <button hover-class="other-button-hover" plain="true" bindtap='skip'>幼儿园</button>
+      <button hover-class="other-button-hover" plain="true" bindtap='mschool'>小学</button>
+      <button hover-class="other-button-hover" plain="true" data-school="初中" bindtap='hschool'>初中</button>
+      <button hover-class="other-button-hover" plain="true" data-school="高中" bindtap='hschool'>高中</button>
+    </view>
+  </view>
+  <view class='period' wx:elif="{{confirm==2}}">
+    <text class='period-title'>请选择学科</text>
+    <view wx:for='{{course}}' wx:for-item="item" wx:for-index="idx" wx:key='index'>
+      <button hover-class="other-button-hover" data-course="{{item}}" plain="true" bindtap='course'>{{item}}</button>
+    </view>
+  </view>
+  <view class='period' wx:elif="{{confirm==3}}">
+    <text class='period-title'>请选择地区</text>
+    <view class='address'>
+    <text>A-B-C-F-G</text>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>安徽</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>北京</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>重庆</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>福建</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>甘肃</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>广东</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>广西</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>贵州</button>
+    <text>H-J-L-N-Q</text>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>河南</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>海南</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>江苏</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>江西</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>吉林</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>辽宁</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>内蒙古</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>宁夏</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>青海</button>
+    <text>S-T-X-Y-Z</text>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>陕西</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>山西</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>山东</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>上海</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>四川</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>天津</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>新疆</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>西藏</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>云南</button>
+      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>浙江</button>
+    </view>
+  </view>
+</view>

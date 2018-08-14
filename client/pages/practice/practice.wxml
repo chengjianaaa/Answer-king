@@ -1,0 +1,17 @@
+<view class='container'>
+  <image class='modtitle' src='/img/practice.jpg'></image>
+  <navigator url='' class='modlist'>
+    <view class='modli-title'><icon class='iz ih-boshi'></icon><text>中学综合素质</text></view>
+    <progress class='progress' percent="20" color='#f79940' /><text class='pnumder'>0/80</text><icon class='iz ih-qbi'></icon>
+    <view class='chapter'>
+    章节列表<icon class='iz ih-yjt'></icon>
+    </view>
+  </navigator>
+  <navigator url='' class='modlist'>
+    <view class='modli-title'><icon class='iz ih-boshi'></icon><text>中学综合素质</text></view>
+    <progress class='progress' percent="20" color='#f79940' /><text class='pnumder'>0/80</text><icon class='iz ih-qbi'></icon>
+    <view class='chapter'>
+    章节列表<icon class='iz ih-yjt'></icon>
+    </view>
+  </navigator>
+</view>

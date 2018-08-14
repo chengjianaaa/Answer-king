@@ -1,0 +1,55 @@
+<view class="container">
+  <view class='centent_title'>
+    职业理念
+    <view class='time'>
+      <icon class='iz ih-djs'></icon>00:00</view>
+  </view>
+  <swiper class='centent_box' style="height:{{winHeight-66}}px">
+    <block wx:for="{{battlesList}}" wx:key="index" wx:key='index'>
+      <swiper-item>
+        <view class='content_answer_box'>
+          <view class='centent_top'>
+            <text class='centetn_dx'>单选</text>
+            <text>{{index+1}}</text>/10
+          </view>
+          <view class='content_topic'>
+            {{item.title}}
+          </view>
+          <block wx:for="{{item.answer}}" wx:for-item='it' wx:for-index='idx' wx:key='index'>
+            <view class='content_answer'>
+              <text>{{it.id}}</text>
+              <text>{{it.answertext}}</text>
+            </view>
+          </block>
+        </view>
+        <block wx:for="{{item.answer}}" wx:for-item='it' wx:key='index' wx:for-index='idx' wx:if="{{it.typekey}}">
+        <view class='content_analysis' wx:if='{{item.id==answer}}'>
+          <text>【答案】：{{it.id}}</text>
+          <text>{{item.rightkey}}</text>
+        </view>
+        </block>
+        <view class='content_bottom'>
+          <icon class='iz ih-caiban'></icon>
+          <icon class='ih' data-id='{{item.id}}' bindtap='tapjie'>解</icon>
+        </view>
+      </swiper-item>
+    </block>
+    <swiper-item>
+      <view class='content_answer_box ' style='height:800rpx'>
+        <view class='content_answer_btn'>
+          <text class='answer_btn active'>1</text>
+          <text class='answer_btn active'>2</text>
+          <text class='answer_btn'>3</text>
+          <text class='answer_btn'>4</text>
+          <text class='answer_btn'>5</text>
+          <text class='answer_btn'>6</text>
+          <text class='answer_btn'>7</text>
+          <text class='answer_btn'>8</text>
+          <text class='answer_btn'>9</text>
+          <text class='answer_btn'>10</text>
+        </view>
+      </view>
+      <button class='content_answer_botn'>交卷并查看结果</button>
+    </swiper-item>
+  </swiper>
+</view>

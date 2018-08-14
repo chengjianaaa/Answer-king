@@ -19,6 +19,53 @@ page {
   float:right;
   font-size: 40rpx;
 }
+.ad{
+  position: relative;
+  display:block;
+  color: #5274c8;
+  text-align: center;
+  padding: 60rpx 30rpx;
+  opacity: .5;
+}
+.ad::after{
+  position:absolute;
+  content: '';
+  width:120rpx;
+  height: 100rpx;
+  top: -10rpx;
+  left: 30rpx;
+  border-bottom: 1rpx solid #5274c8;
+}
+.ad::before{
+  position:absolute;
+  content: '';
+  width:120rpx;
+  height: 100rpx;
+  top: -10rpx;
+  right: 30rpx;
+  border-bottom: 1rpx solid #5274c8;
+}
+navigator{
+  width: 700rpx;
+  height: 180rpx;
+  margin: 50rpx auto 0;
+}
+navigator image{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

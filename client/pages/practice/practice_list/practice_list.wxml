@@ -1,0 +1,34 @@
+<view class='container'>
+  <view class='practice_list'>
+    <view class='list_left'>
+      <text>中学综合素质</text>
+      <navigator>先来10题</navigator>
+    </view>
+    <view class='list_right'>
+      <icon class='iz ih-paper'></icon>
+      <text>已完成练习：0/614</text>
+      <icon class='iz ih-phb'></icon>
+      <text>本科目排行：0/817</text>
+    </view>
+  </view>
+  <view class='modlist-box'>
+    <navigator url='' class='modlist'>
+      <view class='modli-title'>
+        <text class='modli-idx'>01</text>
+        <text>中学综合素质</text>
+      </view>
+      <progress class='progress' percent="20" color='#f79940'/>
+      <text class='pnumder'>0/80</text>
+      <icon class='iz ih-qbi'></icon>
+    </navigator>
+    <navigator url='' class='modlist'>
+      <view class='modli-title'>
+        <text class='modli-idx'>01</text>
+        <text>中学综合素质</text>
+      </view>
+      <progress class='progress' percent="20" color='#f79940' />
+      <text class='pnumder'>0/80</text>
+      <icon class='iz ih-qbi'></icon>
+    </navigator>
+  </view>
+</view>

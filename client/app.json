@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/topicpool/which/which",
+    "pages/practice/practice_list/practice_centent/practice_centent",
+    "pages/practice/practice_list/practice_list",
     "pages/home/home",
     "pages/ranking/ranking",
     "pages/ranking/tranking/tranking",
@@ -17,6 +18,8 @@
     "pages/topicpool/period/period",
     "pages/topicpool/complete/complete",
     "pages/topicpool/seniority/seniority",
+    "pages/practice/practice",
+    "pages/topicpool/which/which",
     "pages/lx/lx"
   ],
   "window": {

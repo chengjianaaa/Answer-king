@@ -68,7 +68,7 @@ page {
   box-sizing: border-box;
 }
 
-.swiper-box swiper-item {
+.swiper-box swiper-item{
   width: 100%;
   overflow: scroll;
 }

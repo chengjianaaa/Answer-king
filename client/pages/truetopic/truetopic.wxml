@@ -1,0 +1,11 @@
+<view class='container'>
+  <image class='modtitle' src='/img/oldexam.jpg'></image>
+  <navigator url='/pages/truetopic/truetopictext/truetopictext' class='modlist'>
+    <view class='modli-title'>2018上半年全国教师资格证《教育知识与能力》中学试题（考生回忆版）</view>
+    <text>完成0次</text>
+  </navigator>
+  <navigator url='/pages/truetopic/truetopictext/truetopictext' class='modlist'>
+    <view class='modli-title'>2018上半年全国教师资格证《教育知识与能力》中学试题（考生回忆版）</view>
+    <text>完成0次</text>
+  </navigator>
+</view>

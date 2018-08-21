@@ -67,7 +67,7 @@ page {
   display: inline-flex;
   width: 50rpx;
   height: 50rpx;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   font-size: 30rpx;
   color: #fff;

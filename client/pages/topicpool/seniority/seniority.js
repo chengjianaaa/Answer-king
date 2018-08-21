@@ -22,7 +22,6 @@ Page({
   onLoad: function(options) {
     var _this=this;
     if (options.confirm) {
-      console.log(123)
       this.setData({
         first: options.confirm?1:0,
         confirm:options.confirm,
@@ -100,7 +99,6 @@ Page({
       confirm: 3,
       courses: event.currentTarget.dataset.course
     })
-    console.log(this.data.courses)
     if (this.data.first) {
       var _this = this;
       var pages = getCurrentPages(); //  获取页面栈
@@ -121,10 +119,8 @@ Page({
     this.setData({
       address: event.currentTarget.dataset.address
     })
-    wx.redirectTo({
-      url: '/pages/topicpool/complete/complete?schools=' +_this.data.schools+ '&&courses='+_this.data.courses+'&&address='+_this.data.address
-    })
-    if (this.data.first) {
+
+    if (this.data.first){
       var _this = this;
       var pages = getCurrentPages(); //  获取页面栈
       var currPage = pages[pages.length - 1]; // 当前页面
@@ -134,6 +130,10 @@ Page({
       })
       wx.navigateBack({
         delta: 1
+      })
+    }else{
+      wx.redirectTo({
+        url: '/pages/topicpool/complete/complete?schools=' + _this.data.schools + '&&courses=' + _this.data.courses + '&&address=' + _this.data.address
       })
     }
   },

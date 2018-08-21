@@ -2,9 +2,9 @@
   <view class='centent_title'>
     职业理念
     <view class='time'>
-      <icon class='iz ih-djs'></icon>00:00</view>
+      <icon class='iz ih-djs'></icon>{{min<10?'0'+min:min}}:{{second<10?'0'+second:second}}</view>
   </view>
-  <swiper class='centent_box' style="height:{{winHeight-66}}px">
+  <swiper class='centent_box' style="height:{{winHeight-66}}px" current="{{current}}">
     <block wx:for="{{battlesList}}" wx:key="index" wx:key='index'>
       <swiper-item>
         <view class='content_answer_box'>
@@ -15,21 +15,21 @@
           <view class='content_topic'>
             {{item.title}}
           </view>
-          <block wx:for="{{item.answer}}" wx:for-item='it' wx:for-index='idx' wx:key='index'>
-            <view class='content_answer'>
+          <block wx:for="{{item.answer}}" wx:for-item='it' wx:for-index='idx' wx:key='idx'>
+            <view class='content_answer {{optionId==index?select===idx?"active":"":list[index]===idx?"active":""}}' data-index='{{index+1}}' data-dyc='{{it.typekey}}' data-id='{{idx}}' bindtap='nextTap'>
               <text>{{it.id}}</text>
               <text>{{it.answertext}}</text>
             </view>
           </block>
         </view>
-        <block wx:for="{{item.answer}}" wx:for-item='it' wx:key='index' wx:for-index='idx' wx:if="{{it.typekey}}">
+        <block wx:for="{{item.answer}}" wx:for-item='it' wx:key='idx' wx:for-index='idx' wx:if="{{it.typekey}}">
         <view class='content_analysis' wx:if='{{item.id==answer}}'>
           <text>【答案】：{{it.id}}</text>
           <text>{{item.rightkey}}</text>
         </view>
         </block>
         <view class='content_bottom'>
-          <icon class='iz ih-caiban'></icon>
+          <icon class='iz ih-caiban' bindtap='menutap'></icon>
           <icon class='ih' data-id='{{item.id}}' bindtap='tapjie'>解</icon>
         </view>
       </swiper-item>
@@ -37,19 +37,12 @@
     <swiper-item>
       <view class='content_answer_box ' style='height:800rpx'>
         <view class='content_answer_btn'>
-          <text class='answer_btn active'>1</text>
-          <text class='answer_btn active'>2</text>
-          <text class='answer_btn'>3</text>
-          <text class='answer_btn'>4</text>
-          <text class='answer_btn'>5</text>
-          <text class='answer_btn'>6</text>
-          <text class='answer_btn'>7</text>
-          <text class='answer_btn'>8</text>
-          <text class='answer_btn'>9</text>
-          <text class='answer_btn'>10</text>
+        <block  wx:for="{{list}}" wx:key="index">
+        <text class='answer_btn {{item!==""?"active":""}}' id='{{index}}' bindtap='btnTap'>{{index+1}}</text>
+        </block>
         </view>
       </view>
-      <button class='content_answer_botn'>交卷并查看结果</button>
+      <button class='content_answer_botn' bindtap='subTap'>交卷并查看结果</button>
     </swiper-item>
   </swiper>
 </view>

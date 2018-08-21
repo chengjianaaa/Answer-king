@@ -1,10 +1,10 @@
 <view class='container'>
   <view class='title'>山西教师资格证考试<icon class='iz ih-you'></icon></view>
   <text class='ad'>眼过千遍，不如手过一遍</text>
-  <navigator url='' class='wod'>
+  <navigator url='/pages/practice/practice' class='wod'>
       <image src='/img/practice.jpg'></image>
   </navigator>
-  <navigator url='' class='low'>
+  <navigator url='/pages/truetopic/truetopic' class='low'>
     <image src='/img/oldexam.jpg'></image>
   </navigator>
 </view>

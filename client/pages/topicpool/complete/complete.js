@@ -15,7 +15,7 @@ Page({
    */
   onLoad: function(options) {
     var _this=this;
-    if (window in options){
+    if (options){
       _this.setData({
         schools: options.schools, //选的哪个学段
         courses: options.courses, //选的哪个学科
@@ -23,7 +23,11 @@ Page({
       })
     }
   },
-
+  btnTap:function(){
+    wx.redirectTo({
+      url:'/pages/topicpool/which/which'
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -35,7 +39,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    console.log(this.data.schools)
+    
   },
 
   /**

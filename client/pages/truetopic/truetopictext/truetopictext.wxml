@@ -1,0 +1,153 @@
+<view class='container'>
+  <view wx:if='{{0==2}}' class='truecentent'>
+    <text class='truecentent-title'>2018上半年全国教师资格证《教育知识与能力》中学试题</text>
+    <view class='truecentent-brief'>本套试卷龚
+      <text>38</text>道题，分三个提型。</view>
+    <view class='truecentent-text'>
+      <icon class='iz'></icon>单项选择，共
+      <text>28</text>道题</view>
+    <view class='truecentent-text'>
+      <icon class='iz'></icon>多项选择，共
+      <text>6</text>道题</view>
+    <view class='truecentent-text'>
+      <icon class='iz'></icon>判断题，共
+      <text>4</text>道题</view>
+    <button class='truecentent-start'>开始答题</button>
+  </view>
+  <view wx:else>
+    <view class='centent_title'>
+      <text>{{title}}</text>
+      <view class='time'>
+        <icon class='iz ih-djs'></icon>{{min
+        <10? '0'+min:min}}:{{second<10? '0'+second:second}}</view>
+      </view>
+      <swiper class='centent_box' style="height:{{winHeight-66}}px" current="{{current}}">
+        <block wx:for="{{single}}" wx:key="index">
+          <swiper-item>
+            <view class='content_answer_box'>
+              <view class='centent_top'>
+                <text class='centetn_dx'>单选</text>
+                <text>{{index+1}}</text>/{{truelist.length}}
+              </view>
+              <view class='content_topic'>
+                {{item.title}}
+              </view>
+              <block wx:for="{{item.answer}}" wx:for-item='it' wx:for-index='idx' wx:key='idx'>
+                <view class='content_answer {{optionId==index?select===idx?"active":"":list[index]===idx?"active":""}}' data-index='{{index+1}}' data-dyc='{{it.typekey}}' data-id='{{idx}}' bindtap='nextTap'>
+                  <text>{{it.id}}</text>
+                  <text>{{it.answertext}}</text>
+                </view>
+              </block>
+            </view>
+            <block wx:for="{{item.answer}}" wx:for-item='it' wx:key='idx' wx:for-index='idx' wx:if="{{it.typekey}}">
+              <view class='content_analysis' wx:if='{{item.id==answer}}'>
+                <text>【答案】：{{it.id}}</text>
+                <text>{{item.rightkey}}</text>
+              </view>
+            </block>
+            <view class='content_bottom'>
+              <icon class='iz ih-caiban' bindtap='menutap'></icon>
+              <icon class='ih' data-id='{{item.id}}' bindtap='tapjie'>解</icon>
+            </view>
+          </swiper-item>
+        </block>
+        <block wx:for="{{many}}" wx:key="index">
+          <swiper-item>
+            <view class='content_answer_box'>
+              <view class='centent_top'>
+                <text class='centetn_dx'>多选</text>
+                <text>{{singlelen+index+1}}</text>/{{truelist.length}}
+              </view>
+              <view class='content_topic'>
+                {{item.title}}
+              </view>
+              <checkbox-group bindchange="manyTap" data-xz='1' data-id='{{singlelen+index}}' data-dyc='{{item.answer}}'>
+                <label class="checkbox" wx:for="{{item.answer}}" wx:for-item='it' wx:for-index='idx' wx:key='idx'>
+                  <checkbox class='content_answer' value='{{idx}}'>
+                    <text class='xx'>{{it.id}}</text>
+                    <text>{{it.answertext}}</text>
+                  </checkbox>
+                </label>
+              </checkbox-group>
+            </view>
+            <block wx:for="{{item.answer}}" wx:for-item='it' wx:key='idx' wx:for-index='idx' wx:if="{{it.typekey}}">
+              <view class='content_analysis' wx:if='{{item.id==answer}}'>
+                <text>【答案】：{{it.id}}</text>
+                <text>{{item.rightkey}}</text>
+              </view>
+            </block>
+            <view class='content_bottom'>
+              <icon class='iz ih-caiban' bindtap='menutap'></icon>
+              <icon class='ih' data-id='{{item.id}}' bindtap='tapjie'>解</icon>
+            </view>
+          </swiper-item>
+        </block>
+        <block wx:for="{{judge}}" wx:key="index">
+          <swiper-item>
+            <view class='content_answer_box'>
+              <view class='centent_top'>
+                <text class='centetn_dx'>判断题</text>
+                <text>{{singlelen+manylen+index+1}}</text>/{{truelist.length}}
+              </view>
+              <view class='content_topic'>
+                {{item.title}}
+              </view>
+              <block wx:for="{{item.answer}}" wx:for-item='it' wx:for-index='idx' wx:key='idx'>
+                <view class='content_answer {{optionId==index?select===idx?"active":"":list[singlelen+manylen+index]===idx?"active":""}}' data-index='{{singlelen+manylen+index+1}}' data-dyc='{{it.typekey}}' data-id='{{idx}}' bindtap='nextTap'>
+                  <text>{{it.id}}</text>
+                  <text>{{it.answertext}}</text>
+                </view>
+              </block>
+            </view>
+            <block wx:for="{{item.answer}}" wx:for-item='it' wx:key='idx' wx:for-index='idx' wx:if="{{it.typekey}}">
+              <view class='content_analysis' wx:if='{{item.id==answer}}'>
+                <text>【答案】：{{it.id}}</text>
+                <text>{{item.rightkey}}</text>
+              </view>
+            </block>
+            <view class='content_bottom'>
+              <icon class='iz ih-caiban' bindtap='menutap'></icon>
+              <icon class='ih' data-id='{{item.id}}' bindtap='tapjie'>解</icon>
+            </view>
+          </swiper-item>
+        </block>
+        <block wx:for="{{brief}}" wx:key="index">
+          <swiper-item>
+            <view class='content_answer_box'>
+              <view class='centent_top'>
+                <text class='centetn_dx'>简答题</text>
+                <text>{{singlelen+manylen+judgelen+index+1}}</text>/{{truelist.length}}
+              </view>
+              <view class='content_topic'>
+                {{item.title}}
+              </view>
+              <block wx:for="{{item.answer}}" wx:for-item='it' wx:for-index='idx' wx:key='idx'>
+                <view class='content_answer {{optionId==index?select===idx?"active":"":list[singlelen+manylen+judgelen+index]===idx?"active":""}}' data-index='{{singlelen+manylen+judgelen+index+1}}' data-dyc='{{it.typekey}}' data-id='{{idx}}' bindtap='briefTap'>
+                  <text>{{it.id}}</text>
+                  <text>{{it.answertext}}</text>
+                </view>
+              </block>
+            </view>
+              <view class='content_analysis' wx:if='{{item.id==answer}}'>
+                <text>【不用作答】</text>
+                <text>{{item.rightkey}}</text>
+              </view>
+            <view class='content_bottom'>
+              <icon class='iz ih-caiban' bindtap='menutap'></icon>
+              <icon class='ih' data-id='{{item.id}}' bindtap='tapjie'>解</icon>
+            </view>
+          </swiper-item>
+        </block>
+        <swiper-item>
+          <view class='content_answer_box ' style='height:800rpx'>
+            <view class='content_answer_btn'>
+              <block wx:for="{{list}}" wx:key="index">
+                <text class='answer_btn {{item!==""?"active":""||index>singlelen+manylen+judgelen-1?"active":""}}' id='{{index}}' bindtap='btnTap'>{{index+1}}</text>
+              </block>
+            </view>
+          </view>
+          <button class='content_answer_botn' bindtap='subTap'>交卷并查看结果</button>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>

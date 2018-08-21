@@ -1,7 +1,5 @@
 {
   "pages": [
-    "pages/practice/practice_list/practice_centent/practice_centent",
-    "pages/practice/practice_list/practice_list",
     "pages/home/home",
     "pages/ranking/ranking",
     "pages/ranking/tranking/tranking",
@@ -18,8 +16,14 @@
     "pages/topicpool/period/period",
     "pages/topicpool/complete/complete",
     "pages/topicpool/seniority/seniority",
-    "pages/practice/practice",
     "pages/topicpool/which/which",
+    "pages/practice/practice",
+    "pages/practice/practice_list/practice_list",
+    "pages/practice/practice_list/practice_centent/practice_centent",
+    "pages/practice/practice_list/practice_analysis/practice_analysis",
+    "pages/practice/practice_list/practice_Answer/practice_Answer",
+    "pages/truetopic/truetopic",
+    "pages/truetopic/truetopictext/truetopictext",
     "pages/lx/lx"
   ],
   "window": {

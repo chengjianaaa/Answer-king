@@ -27,7 +27,7 @@
       </navigator>
     </view>
     <view class='modules-topic'>
-      <navigator url="/pages/knowledge/knowledge" hover-class="navigator-hover">
+      <navigator url="/pages/topicpool/topicpool" hover-class="navigator-hover">
       <image src='/img/sy_03.jpg'></image>
       </navigator>
     </view>

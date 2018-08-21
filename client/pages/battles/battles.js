@@ -184,7 +184,7 @@ Page({
   onLoad: function(options) {
     //获取题库
     this.setData({
-      battlesList: battlesData.battlesList
+      battlesList:battlesData.battlesList
     })
   },
 

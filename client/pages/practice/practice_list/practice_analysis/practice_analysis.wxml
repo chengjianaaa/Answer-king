@@ -1,0 +1,24 @@
+<view class='container'>
+  <text class='an-title'>中学综合素质-职业理念</text>
+  <view class='an-odds'>
+    <text>正确率</text>
+    <text>{{an_odds==0?'真菜':an_odds}}0%</text>
+  </view>
+  <view class='an-usetime'>
+    <view class='an-useone'>
+      <text>答对题</text>
+      <text>{{an_odds}}/{{an_choicelen}}题</text>
+    </view>
+    <view class='an-useone'>
+      <text>总用时</text>
+      <text>{{an_min<10?"0"+an_min:an_min}}：{{an_second<10?"0"+an_second:an_second}}</text>
+    </view>
+  </view>
+  <view class='an-answer'>
+    <text class='{{item==1?"active":""}}' wx:for='{{an_list}}' wx:key='index'>{{index+1}}</text>
+  </view>
+  <view class='an-btn'>
+    <button bindtap='jiexiTap'>查看解析</button>
+    <button>继续练习</button>
+  </view>
+</view>

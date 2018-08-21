@@ -20,34 +20,34 @@
     <view class='address'>
     <text>A-B-C-F-G</text>
       <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>安徽</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>北京</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>重庆</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>福建</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>甘肃</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>广东</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>广西</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>贵州</button>
+      <button plain="true" hover-class="other-button-hover" data-address="北京" bindtap='address'>北京</button>
+      <button plain="true" hover-class="other-button-hover" data-address="重庆" bindtap='address'>重庆</button>
+      <button plain="true" hover-class="other-button-hover" data-address="福建" bindtap='address'>福建</button>
+      <button plain="true" hover-class="other-button-hover" data-address="甘肃" bindtap='address'>甘肃</button>
+      <button plain="true" hover-class="other-button-hover" data-address="广东" bindtap='address'>广东</button>
+      <button plain="true" hover-class="other-button-hover" data-address="广西" bindtap='address'>广西</button>
+      <button plain="true" hover-class="other-button-hover" data-address="贵州" bindtap='address'>贵州</button>
     <text>H-J-L-N-Q</text>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>河南</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>海南</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>江苏</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>江西</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>吉林</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>辽宁</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>内蒙古</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>宁夏</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>青海</button>
+      <button plain="true" hover-class="other-button-hover" data-address="河南" bindtap='address'>河南</button>
+      <button plain="true" hover-class="other-button-hover" data-address="海南" bindtap='address'>海南</button>
+      <button plain="true" hover-class="other-button-hover" data-address="江苏" bindtap='address'>江苏</button>
+      <button plain="true" hover-class="other-button-hover" data-address="江西" bindtap='address'>江西</button>
+      <button plain="true" hover-class="other-button-hover" data-address="吉林" bindtap='address'>吉林</button>
+      <button plain="true" hover-class="other-button-hover" data-address="辽宁" bindtap='address'>辽宁</button>
+      <button plain="true" hover-class="other-button-hover" data-address="内蒙古" bindtap='address'>内蒙古</button>
+      <button plain="true" hover-class="other-button-hover" data-address="宁夏" bindtap='address'>宁夏</button>
+      <button plain="true" hover-class="other-button-hover" data-address="青海" bindtap='address'>青海</button>
     <text>S-T-X-Y-Z</text>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>陕西</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>山西</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>山东</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>上海</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>四川</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>天津</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>新疆</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>西藏</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>云南</button>
-      <button plain="true" hover-class="other-button-hover" data-address="安徽" bindtap='address'>浙江</button>
+      <button plain="true" hover-class="other-button-hover" data-address="陕西" bindtap='address'>陕西</button>
+      <button plain="true" hover-class="other-button-hover" data-address="山西" bindtap='address'>山西</button>
+      <button plain="true" hover-class="other-button-hover" data-address="山东" bindtap='address'>山东</button>
+      <button plain="true" hover-class="other-button-hover" data-address="上海" bindtap='address'>上海</button>
+      <button plain="true" hover-class="other-button-hover" data-address="四川" bindtap='address'>四川</button>
+      <button plain="true" hover-class="other-button-hover" data-address="天津" bindtap='address'>天津</button>
+      <button plain="true" hover-class="other-button-hover" data-address="新疆" bindtap='address'>新疆</button>
+      <button plain="true" hover-class="other-button-hover" data-address="西藏" bindtap='address'>西藏</button>
+      <button plain="true" hover-class="other-button-hover" data-address="云南" bindtap='address'>云南</button>
+      <button plain="true" hover-class="other-button-hover" data-address="浙江" bindtap='address'>浙江</button>
     </view>
   </view>
 </view>

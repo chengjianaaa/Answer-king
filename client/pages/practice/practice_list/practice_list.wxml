@@ -2,7 +2,7 @@
   <view class='practice_list'>
     <view class='list_left'>
       <text>中学综合素质</text>
-      <navigator>先来10题</navigator>
+      <navigator url='/pages/practice/practice_list/practice_centent/practice_centent'>先来10题</navigator>
     </view>
     <view class='list_right'>
       <icon class='iz ih-paper'></icon>
@@ -12,7 +12,7 @@
     </view>
   </view>
   <view class='modlist-box'>
-    <navigator url='' class='modlist'>
+    <navigator url='/pages/practice/practice_list/practice_centent/practice_centent' class='modlist'>
       <view class='modli-title'>
         <text class='modli-idx'>01</text>
         <text>中学综合素质</text>
@@ -21,7 +21,7 @@
       <text class='pnumder'>0/80</text>
       <icon class='iz ih-qbi'></icon>
     </navigator>
-    <navigator url='' class='modlist'>
+    <navigator url='/pages/practice/practice_list/practice_centent/practice_centent' class='modlist'>
       <view class='modli-title'>
         <text class='modli-idx'>01</text>
         <text>中学综合素质</text>

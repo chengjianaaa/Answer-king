@@ -1,2 +1,6 @@
 <!--liveClass/liveClass.wxml-->
-<text>直播课，哇咔咔咔咔咔咔</text>
+<view class="page-body">
+  <view class="page-section page-section-gap">
+    <web-view src="https://www.eshikao.com"></web-view>
+  </view>
+</view>
